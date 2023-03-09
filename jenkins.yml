@@ -1,6 +1,4 @@
 pipeline:
-  post:
-    always:
-      - echo Test
-    changed:
-      - echo Test
+  agent:
+    node:
+      label: 'label'
