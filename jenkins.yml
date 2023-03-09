@@ -8,4 +8,3 @@ pipeline:
     - stage: "Stage2"
       steps:
         - echo "2"
-        
