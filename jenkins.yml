@@ -13,6 +13,3 @@ pipeline:
     - stage: "Stage2"
       steps:
         - echo "2"
-    - stage: "Stage3"
-      steps:
-        - echo "3"
