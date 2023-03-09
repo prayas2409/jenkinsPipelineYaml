@@ -1,6 +1,11 @@
 pipeline:
   agent:
     none:
+    triggers:
+      GenericTrigger:
+        causeString: "Triggered from Webhook"
+        token: "unique-token-to-start-the-current-pipeline"
+
   stages:
     - stage: "Stage1"
       steps:
@@ -11,4 +16,3 @@ pipeline:
     - stage: "Stage3"
       steps:
         - echo "3"
-        
