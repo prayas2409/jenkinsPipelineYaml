@@ -3,7 +3,9 @@ pipeline:
     any:
   stages:
     - stage: "clone" 
-      steps: sh 'if [[ ! -f jenkinsPipelineYaml ]]; then git clone https://github.com/prayas2409/jenkinsPipelineYaml.git fi'
+      steps: sh ''' if [[ ! -d jenkinsPipelineYaml ]]; then 
+                    git clone https://github.com/prayas2409/jenkinsPipelineYaml.git 
+                    fi '''
 
     - stage: "terraform Init"
       steps:
