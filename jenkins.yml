@@ -1,14 +1,10 @@
 pipeline:
   agent:
-    any:
-    triggers:
-      GenericTrigger:
-        causeString: "Triggered from Webhook"
-        token: "unique-token-to-start-the-current-pipeline"
+    none:
   stages:
-    - stage: "terraform Init"
-        steps:
-        - sh 'terraform init > 2>&1 demo.txt &'
-    - stage: "tf plan"
-        steps:
-        - sh 'terraform plan'
+    - stage: "Stage1"
+      steps:
+        - echo "1"
+    - stage: "Stage2"
+      steps:
+        - echo "2"
