@@ -1,15 +1,15 @@
 pipeline:
   agent:
     any:
-  # environment:
-  #   MY_FILE = fileExists 'jenkinsPipelineYaml'
-  # stages:
-  #   - stage: "clone" 
-  #     when: 
-  #       expression: 
-  #         MY_FILE == 'true'
-  #       steps:
-  #         script: if fileExists('jenkinsPipelineYaml') { git clone https://github.com/prayas2409/jenkinsPipelineYaml.git }
+  environment:
+    MY_FILE = fileExists 'jenkinsPipelineYaml'
+  stages:
+    # - stage: "clone" 
+    #   when: 
+    #     expression: 
+    #       MY_FILE == 'true'
+    #     steps:
+    #       script: if fileExists('jenkinsPipelineYaml') { git clone https://github.com/prayas2409/jenkinsPipelineYaml.git }
     - stage: "terraform Init"
       steps:
         - sh 'cd jenkinsPipelineYaml && terraform init'
