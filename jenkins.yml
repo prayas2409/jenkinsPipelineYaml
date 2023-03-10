@@ -2,9 +2,12 @@ pipeline:
   agent:
     any:
   stages:
+    - stage: "clone" 
+      steps: sh 'git clone https://github.com/prayas2409/jenkinsPipelineYaml.git'
+
     - stage: "terraform Init"
       steps:
-        - sh 'terraform init > demo.txt 2>&1 &'
+        - sh 'cd jenkinsPipelineYaml && terraform init'
     - stage: "tf plan"
       steps:
         - sh 'terraform plan'
