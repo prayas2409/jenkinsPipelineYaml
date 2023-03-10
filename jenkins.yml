@@ -10,7 +10,7 @@ pipeline:
     #       MY_FILE == 'true'
     #     steps:
     #       script: if fileExists('jenkinsPipelineYaml') { git clone https://github.com/prayas2409/jenkinsPipelineYaml.git }
-    - stage: "terraform Init"
+    - stage: "checkout"
       steps:
         - sh 'git clone https://github.com/prayas2409/jenkinsPipelineYaml.git'
     - stage: "terraform Init"
