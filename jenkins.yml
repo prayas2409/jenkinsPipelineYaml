@@ -10,4 +10,7 @@ pipeline:
         - sh 'cd jenkinsPipelineYaml && terraform init'
     - stage: "tf plan"
       steps:
-        - sh 'terraform plan'
+        - sh 'cd jenkinsPipelineYaml && terraform plan'
+    - stage: "deploy"
+      steps:
+        - sh 'cd jenkinsPipelineYaml && terraform apply'
