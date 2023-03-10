@@ -9,7 +9,7 @@ resource "aws_instance" "ec2_public" {
   instance_type               = var.instance_type
   key_name                    = var.key_name
   security_groups             = [var.security_group]
-  subnet_id                   = var.public_subnet-1
+  subnet_id                   = var.public_subnet_1
   associate_public_ip_address = true
   #user_data                   = "${data.template_file.provision.rendered}"
   #iam_instance_profile = "${aws_iam_instance_profile.some_profile.id}"
