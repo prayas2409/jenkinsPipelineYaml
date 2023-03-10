@@ -1,8 +1,8 @@
 pipeline:
   agent:
     any:
-  environment:
-    MY_FILE = fileExists 'jenkinsPipelineYaml'
+  # environment:
+  #   MY_FILE = fileExists 'jenkinsPipelineYaml'
   stages:
     # - stage: "clone" 
     #   when: 
