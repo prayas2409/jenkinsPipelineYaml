@@ -33,7 +33,7 @@ variable "vpc-cidr" {
   description = "VPC CIDR BLOCK"
   type        = string
 }
-variable "Public_Subnet_1" {
+variable "public_subnet_1" {
   default     = "172.31.32.0/20"
   description = "Public_Subnet_1"
   type        = string
