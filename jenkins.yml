@@ -9,7 +9,7 @@ pipeline:
   stages:
     - stage: "terraform Init"
       steps:
-        - sh 'terraform init > tfflogs.txt'
+        - sh 'terraform init > tfflogs.txt 2>&1 &'
     - stage: "tf action"
       steps:
         - echo "Terraform action is –> ${action}”"
