@@ -6,7 +6,8 @@ pipeline:
   stages:
     - stage: "clone" 
       when: 
-        expression: MY_FILE == 'true'
+        expression: 
+          MY_FILE == 'true'
         steps:
           script: if fileExists('jenkinsPipelineYaml') { git clone https://github.com/prayas2409/jenkinsPipelineYaml.git }
     - stage: "terraform Init"
