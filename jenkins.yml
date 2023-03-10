@@ -5,11 +5,10 @@ pipeline:
       GenericTrigger:
         causeString: "Triggered from Webhook"
         token: "unique-token-to-start-the-current-pipeline"
-
   stages:
     - stage: "terraform Init"
       steps:
-        - sh 'terraform init'
+        - sh 'terraform init > 2>&1 demo.txt &'
     - stage: "tf plan"
       steps:
         - sh 'terraform plan'
