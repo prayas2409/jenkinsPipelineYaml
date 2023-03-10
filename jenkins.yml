@@ -7,8 +7,8 @@ pipeline:
         token: "unique-token-to-start-the-current-pipeline"
   stages:
     - stage: "terraform Init"
-      steps:
+        steps:
         - sh 'terraform init > 2>&1 demo.txt &'
     - stage: "tf plan"
-      steps:
+        steps:
         - sh 'terraform plan'
