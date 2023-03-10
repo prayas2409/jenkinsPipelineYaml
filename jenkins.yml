@@ -9,7 +9,7 @@ pipeline:
   stages:
     - stage: "terraform Init"
       steps:
-        - sh 'terraform init > tfflogs.txt 2>&1 &'
+        - sh 'terraform init'
     - stage: "tf plan"
       steps:
         - sh 'terraform plan'
