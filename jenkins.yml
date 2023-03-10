@@ -4,7 +4,7 @@ pipeline:
   stages:
     - stage: "terraform Init"
       steps:
-        - sh 'terraform init > 2>&1 demo.txt &'
+        - sh 'terraform init > demo.txt 2>&1 &'
     - stage: "tf plan"
       steps:
         - sh 'terraform plan'
