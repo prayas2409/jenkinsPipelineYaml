@@ -7,9 +7,9 @@ pipeline:
         token: "unique-token-to-start-the-current-pipeline"
 
   stages:
-    - stage: "Stage1"
+    - stage: "terraform Init"
       steps:
-        - echo "1"
-    - stage: "Stage2"
+        - terraform init
+    - stage: "tf action"
       steps:
-        - echo "2"
+        - echo "Terraform action is –> ${action}”"
