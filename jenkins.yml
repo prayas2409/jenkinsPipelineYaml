@@ -9,7 +9,7 @@ pipeline:
   stages:
     - stage: "terraform Init"
       steps:
-        - sh `terraform init`
+        - sh 'terraform init'
     - stage: "tf action"
       steps:
         - echo "Terraform action is –> ${action}”"
